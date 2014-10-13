@@ -1,6 +1,6 @@
 name: Spawners2Money
 main: com.gmail.moonmasters200.Spawners2Money.Main
-version: 0.0.3
+version: 0.0.4
 author: millenium200
 permissions:
     millenium.spawners.*:

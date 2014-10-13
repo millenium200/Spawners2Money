@@ -51,7 +51,7 @@ public class Main extends JavaPlugin implements Listener
         else
         {
           player.sendMessage("You got $10,000 for mining a spawner!");
-          Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "eco give " + player.getName() + "10000");
+          Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "eco give " + player.getName() + " 10000");
           return;
         }
       }
@@ -61,7 +61,7 @@ public class Main extends JavaPlugin implements Listener
         if (player.hasPermission("spawners2money.donor"))
         {
           player.sendMessage("You got $10,000 for mining a spawner!");
-          Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "eco give " + player.getName() + "10000");
+          Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "eco give " + player.getName() + " 10000");
           return;
         } else
         {
