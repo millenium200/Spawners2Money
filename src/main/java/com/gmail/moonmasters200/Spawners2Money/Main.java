@@ -44,6 +44,7 @@ public class Main extends JavaPlugin implements Listener
         /** Tool does have silk */
         if (player.hasPermission("spawners2money.donor"))
         {
+          player.sendMessage("You just mined a spawnwer with Silk Touch!  Use a regular pick for money.");
           // Does nothing
           return;
         } 
@@ -64,6 +65,7 @@ public class Main extends JavaPlugin implements Listener
           return;
         } else
         {
+          player.sendMessage("Use a silk touch pick axe in the future to get money from spawners!");
           // Does nothing
           return;
         }
