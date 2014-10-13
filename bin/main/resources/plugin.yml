@@ -1,0 +1,11 @@
+name: Spawners2Money
+main: com.gmail.moonmasters200.Spawners2Money.Main
+version: 0.0.1
+author: millenium200
+permissions:
+    millenium.spawners.*:
+        description: Gives access to all spawners perms
+        children:
+            spawners2money.donor: true
+    spawners2money.donor:
+        description: Allows players to get money from spawners without silk
