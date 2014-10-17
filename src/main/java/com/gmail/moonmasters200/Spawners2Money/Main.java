@@ -58,17 +58,9 @@ public class Main extends JavaPlugin implements Listener
       /** Tool does not have silk */
       else
       {
-        if (player.hasPermission("spawners2money.donor"))
-        {
-          player.sendMessage("You got $10,000 for mining a spawner!");
-          Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "eco give " + player.getName() + " 10000");
-          return;
-        } else
-        {
-          player.sendMessage("Use a silk touch pick axe in the future to get money from spawners!");
-          // Does nothing
-          return;
-        }
+        player.sendMessage("You got $10,000 for mining a spawner!");
+        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "eco give " + player.getName() + " 10000");
+        return;
       }
     }
   }
