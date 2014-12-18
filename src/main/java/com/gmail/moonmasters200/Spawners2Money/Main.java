@@ -12,6 +12,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
+
 public class Main extends JavaPlugin implements Listener
 {
   public void onEnable()
@@ -44,8 +45,9 @@ public class Main extends JavaPlugin implements Listener
         /** Tool does have silk */
         if (player.hasPermission("spawners2money.donor"))
         {
-          player.sendMessage("You just mined a spawnwer with Silk Touch!  Use a regular pick for money.");
-          // Does nothing
+          player.sendMessage("You mined a spawner and got 25K!");
+          player.sendMessage("Use that money to buy your choice of spawner at /mall.");
+          Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "eco give " + player.getName() + " 25000");
           return;
         } 
         else
@@ -56,19 +58,14 @@ public class Main extends JavaPlugin implements Listener
         }
       }
       /** Tool does not have silk */
-      else
-      {
+      else {
+        player.sendMessage("You got $10,000 for mining a spawner!");
+        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "eco give " + player.getName() + " 10000");
         if (player.hasPermission("spawners2money.donor"))
         {
-          player.sendMessage("You got $10,000 for mining a spawner!");
-          Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "eco give " + player.getName() + " 10000");
-          return;
-        } else
-        {
-          player.sendMessage("Use a silk touch pick axe in the future to get money from spawners!");
-          // Does nothing
-          return;
-        }
+          player.sendMessage("Use a silk touch in the future for 15K more money!");
+        } 
+        return;
       }
     }
   }
