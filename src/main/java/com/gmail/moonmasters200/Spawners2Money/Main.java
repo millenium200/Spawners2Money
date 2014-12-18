@@ -58,7 +58,6 @@ public class Main extends JavaPlugin implements Listener
         }
       }
       /** Tool does not have silk */
-<<<<<<< HEAD
       else {
         player.sendMessage("You got $10,000 for mining a spawner!");
         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "eco give " + player.getName() + " 10000");
@@ -66,14 +65,13 @@ public class Main extends JavaPlugin implements Listener
         {
           player.sendMessage("Use a silk touch in the future for 15K more money!");
         } 
-=======
       else
       {
         player.sendMessage("You got $10,000 for mining a spawner!");
         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "eco give " + player.getName() + " 10000");
->>>>>>> origin/master
         return;
       }
     }
+   }
   }
 }
