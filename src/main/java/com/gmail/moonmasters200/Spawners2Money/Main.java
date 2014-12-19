@@ -33,8 +33,8 @@ public class Main extends JavaPlugin implements Listener
       Block block = event.getBlock();
       Player player = event.getPlayer();
       ItemStack tool = player.getItemInHand();
-      Material blockName = block.getType();
-      player.sendMessage("You just broke " + blockName);
+      //Material blockName = block.getType();
+      //player.sendMessage("You just broke " + blockName);
       if (block.getType() != Material.MOB_SPAWNER)
       {
         return;
@@ -45,9 +45,9 @@ public class Main extends JavaPlugin implements Listener
         /** Tool does have silk */
         if (player.hasPermission("spawners2money.donor"))
         {
-          player.sendMessage("You mined a spawner and got 25K!");
+          player.sendMessage("You mined a spawner and got 20K!");
           player.sendMessage("Use that money to buy your choice of spawner at /mall.");
-          Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "eco give " + player.getName() + " 25000");
+          Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "eco give " + player.getName() + " 20000");
           return;
         } 
         else
