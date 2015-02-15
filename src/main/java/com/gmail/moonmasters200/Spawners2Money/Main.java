@@ -45,30 +45,30 @@ public class Main extends JavaPlugin implements Listener
         /** Tool does have silk */
         if (player.hasPermission("spawners2money.donor"))
         {
-          player.sendMessage("You mined a spawner and got 20K!");
+          player.sendMessage("You mined a spawner and got 14K!");
           player.sendMessage("Use that money to buy your choice of spawner at /mall.");
-          Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "eco give " + player.getName() + " 20000");
+          Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "eco give " + player.getName() + " 14000");
           return;
         } 
         else
         {
-          player.sendMessage("You got $10,000 for mining a spawner!");
-          Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "eco give " + player.getName() + " 10000");
+          player.sendMessage("You got $7,000 for mining a spawner!");
+          Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "eco give " + player.getName() + " 7000");
           return;
         }
       }
       /** Tool does not have silk */
       else {
-        player.sendMessage("You got $10,000 for mining a spawner!");
-        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "eco give " + player.getName() + " 10000");
+        player.sendMessage("You got $7,000 for mining a spawner!");
+        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "eco give " + player.getName() + " 7000");
         if (player.hasPermission("spawners2money.donor"))
         {
-          player.sendMessage("Use a silk touch in the future for 15K more money!");
+          player.sendMessage("Use a silk touch in the future for 7K more money!");
         } 
       else
       {
-        player.sendMessage("You got $10,000 for mining a spawner!");
-        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "eco give " + player.getName() + " 10000");
+        player.sendMessage("You got $7,000 for mining a spawner!");
+        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "eco give " + player.getName() + " 7000");
         return;
       }
     }
